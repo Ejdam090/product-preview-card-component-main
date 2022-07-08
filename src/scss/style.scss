@@ -1,0 +1,185 @@
+@import "variabels.scss";
+@import "mixin.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body-wrapper {
+  background-color: $Cream;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    margin: 0 auto;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: $White;
+    @media screen and(max-width:425px) {
+      height: 60vh;
+    }
+    .card__img {
+      width: 50%;
+      height: 100%;
+      @include bgimage(
+        "/images/image-product-desktop.jpg",
+        cover,
+        center,
+        no-repeat
+      );
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      @media screen and(max-width:425px) {
+        height: 100%;
+      }
+    }
+    .card__content {
+      width: 50%;
+      height: 100%;
+      padding: 2rem 3rem;
+      @media screen and(max-width:768px) {
+        width: 60%;
+        padding: 0.8rem 0.9rem;
+        height: 50%;
+      }
+      .content__subtitle {
+        text-transform: uppercase;
+        color: $Very-dark-blue;
+        font-weight: lighter;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        @media screen and(max-width:1115px) {
+          padding-bottom: 1rem;
+        }
+        @media screen and(max-width:768px) {
+          font-size: 0.6rem;
+        }
+        @media screen and(max-width:425px) {
+          font-size: 0.2rem;
+        }
+      }
+      .content__title {
+        @include fontSecond;
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+        @media screen and(max-width:1115px) {
+          padding-bottom: 1rem;
+          font-size: 2rem;
+        }
+        @media screen and(max-width:768px) {
+          font-size: 1.2rem;
+        }
+        @media screen and(max-width:425px) {
+          font-size: 0.6rem;
+        }
+      }
+      .content___about {
+        width: 100%;
+        color: $Dark-grayish-blue;
+        font-size: 1.1rem;
+        text-align: left;
+        padding-bottom: 2rem;
+        @media screen and(max-width:1115px) {
+          padding-bottom: 1rem;
+          font-size: 0.9rem;
+        }
+        @media screen and(max-width:768px) {
+          font-size: 0.7rem;
+        }
+        @media screen and(max-width:425px) {
+          font-size: 0.3rem;
+        }
+      }
+      .content__price {
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        @media screen and(max-width:1115px) {
+          width: 90%;
+        }
+        @media screen and(max-width:1032px) {
+          width: 100%;
+        }
+        .price {
+          @include fontSecond;
+          color: $Dark-cyan;
+          font-weight: bold;
+          font-size: 2.5rem;
+          @media screen and(max-width:1115px) {
+            font-size: 2rem;
+          }
+          @media screen and(max-width:948px) {
+            font-size: 1.5rem;
+          }
+          @media screen and(max-width:808px) {
+            font-size: 1.3rem;
+          }
+          @media screen and(max-width:768px) {
+            font-size: 1.2rem;
+          }
+          @media screen and(max-width:425px) {
+            font-size: 0.5rem;
+          }
+        }
+        .old-price {
+          text-decoration: line-through;
+          color: $Dark-grayish-blue;
+          @media screen and(max-width:948px) {
+            font-size: 0.8rem;
+          }
+          @media screen and(max-width:768px) {
+            font-size: 0.6rem;
+          }
+          @media screen and(max-width:425px) {
+            font-size: 0.2rem;
+          }
+        }
+      }
+      .add-to-card {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 10px;
+        border: none;
+        background-color: $Dark-cyan;
+        color: $White;
+        font-size: 1rem;
+        font-weight: 600;
+        img {
+          padding-right: 1rem;
+          @media screen and(max-width:768px) {
+            padding-right: 0.5rem;
+          }
+          @media screen and(max-width:425px) {
+            width: 0.8rem;
+          }
+        }
+        @media screen and(max-width:768px) {
+          font-size: 0.9rem;
+        }
+        @media screen and(max-width:838px) {
+          font-size: 0.8rem;
+        }
+        @media screen and(max-width:425px) {
+          font-size: 0.3rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
