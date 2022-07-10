@@ -3,7 +3,6 @@ const sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
-const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 const autoprefixer = require("autoprefixer");
 const concat = require("gulp-concat");
